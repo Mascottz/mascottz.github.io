@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Support — MasTECH Innovations</title>
+  <meta name="description" content="Fast, reliable tech support and repair services. OS installation, screen repairs, drive partitioning, virus removal, and more." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { neon: '#00f0ff', cyber: '#00ff88', darkbase: '#0a0e17', darkcard: '#111827', darksurface: '#0f1623' }, fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['JetBrains Mono','monospace'] } } }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="antialiased">
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-blur bg-darkbase/80 border-b border-white/5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-2 group"><div class="w-9 h-9 rounded-lg bg-gradient-to-br from-neon to-cyber flex items-center justify-center"><svg class="w-5 h-5 text-darkbase" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg></div><span class="text-lg font-bold tracking-tight"><span class="text-white group-hover:text-neon transition-colors">Mas</span><span class="text-neon group-hover:text-cyber transition-colors">TECH</span></span></a>
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="index.html" class="nav-link px-4 py-2 text-sm font-medium text-gray-300 hover:text-neon rounded-lg hover:bg-white/5 transition-all duration-200">Home</a>
+          <a href="services.html" class="nav-link px-4 py-2 text-sm font-medium text-gray-300 hover:text-neon rounded-lg hover:bg-white/5 transition-all duration-200">Services</a>
+          <a href="tech-support.html" class="nav-link nav-active px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200">Tech Support</a>
+          <a href="ceo.html" class="nav-link px-4 py-2 text-sm font-medium text-gray-300 hover:text-neon rounded-lg hover:bg-white/5 transition-all duration-200">CEO Portfolio</a>
+          <a href="contact.html" class="nav-link px-4 py-2 text-sm font-medium text-gray-300 hover:text-neon rounded-lg hover:bg-white/5 transition-all duration-200">Contact</a>
+        </div>
+        <div class="hidden lg:flex items-center gap-3"><a href="contact.html" class="btn-primary text-sm !py-2.5 !px-6 rounded-lg"><span>Get Support</span></a></div>
+        <button id="menu-toggle" class="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/5 transition-colors" aria-label="Toggle menu"><div class="flex flex-col gap-1.5"><span class="block w-6 h-0.5 bg-white rounded transition-all duration-300" id="bar1"></span><span class="block w-6 h-0.5 bg-white rounded transition-all duration-300" id="bar2"></span><span class="block w-4 h-0.5 bg-neon rounded transition-all duration-300" id="bar3"></span></div></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-darksurface/98 nav-blur border-l border-white/5 lg:hidden z-50">
+      <div class="flex flex-col p-6 pt-20 gap-2">
+        <a href="index.html" class="mobile-nav-link px-4 py-3 text-base font-medium text-gray-300 hover:text-neon hover:bg-white/5 rounded-lg transition-all">Home</a>
+        <a href="services.html" class="mobile-nav-link px-4 py-3 text-base font-medium text-gray-300 hover:text-neon hover:bg-white/5 rounded-lg transition-all">Services</a>
+        <a href="tech-support.html" class="mobile-nav-link px-4 py-3 text-base font-medium text-neon bg-white/5 rounded-lg">Tech Support</a>
+        <a href="ceo.html" class="mobile-nav-link px-4 py-3 text-base font-medium text-gray-300 hover:text-neon hover:bg-white/5 rounded-lg transition-all">CEO Portfolio</a>
+        <a href="contact.html" class="mobile-nav-link px-4 py-3 text-base font-medium text-gray-300 hover:text-neon hover:bg-white/5 rounded-lg transition-all">Contact</a>
+        <div class="mt-4 pt-4 border-t border-white/10"><a href="contact.html" class="btn-primary block text-center text-sm !py-3 rounded-lg"><span>Get Support</span></a></div>
+      </div>
+    </div>
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/60 z-40 lg:hidden hidden"></div>
+  </nav>
+
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="page-hero page-grid">
+    <div class="radial-cyber absolute inset-0"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm mb-8 reveal">
+        <a href="index.html" class="breadcrumb-link">Home</a>
+        <svg class="w-3.5 h-3.5 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+        <span class="text-cyber font-medium">Tech Support</span>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="inline-block text-xs font-bold tracking-[0.2em] uppercase text-cyber mb-4 reveal">Tech Support & Repairs</span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 reveal" style="transition-delay:0.1s">
+          Your Devices,<br/><span class="gradient-text">Back to Life</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-400 leading-relaxed reveal" style="transition-delay:0.2s">
+          Don't let a broken screen, corrupted OS, or sluggish machine slow your business down. Our technicians diagnose and resolve issues fast — with transparent pricing and a commitment to getting you back online.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SUPPORT FEATURES ═══ -->
+  <section class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="radial-neon absolute inset-0"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div class="neon-border rounded-2xl bg-darkcard/50 p-6 text-center reveal">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-neon/10 border border-neon/20 flex items-center justify-center">
+            <svg class="w-7 h-7 text-neon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Fast Turnaround</h3>
+          <p class="text-sm text-gray-500">Most repairs completed within 24–48 hours of diagnosis</p>
+        </div>
+        <div class="neon-border rounded-2xl bg-darkcard/50 p-6 text-center reveal" style="transition-delay:0.1s">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-cyber/10 border border-cyber/20 flex items-center justify-center">
+            <svg class="w-7 h-7 text-cyber" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Warranty Backed</h3>
+          <p class="text-sm text-gray-500">Every repair carries a service warranty for peace of mind</p>
+        </div>
+        <div class="neon-border rounded-2xl bg-darkcard/50 p-6 text-center reveal" style="transition-delay:0.2s">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-neon/10 border border-neon/20 flex items-center justify-center">
+            <svg class="w-7 h-7 text-neon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Remote & On-Site</h3>
+          <p class="text-sm text-gray-500">Walk-in, pickup service, or remote diagnostics — your choice</p>
+        </div>
+        <div class="neon-border rounded-2xl bg-darkcard/50 p-6 text-center reveal" style="transition-delay:0.3s">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-cyber/10 border border-cyber/20 flex items-center justify-center">
+            <svg class="w-7 h-7 text-cyber" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Transparent Pricing</h3>
+          <p class="text-sm text-gray-500">Diagnostic quote before any work begins — no surprises</p>
+        </div>
+      </div>
+
+
+      <!-- ═══ REPAIR SERVICES GRID ═══ -->
+      <div class="mb-20">
+        <div class="flex items-center gap-3 mb-10 reveal">
+          <div class="w-1.5 h-8 rounded-full bg-gradient-to-b from-neon to-cyber"></div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white">What We Fix</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="neon-border card-shine rounded-2xl bg-darkcard/50 p-6 reveal">
+            <h3 class="text-lg font-bold text-white mb-2">OS Installation & Troubleshooting</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">Clean installs of Windows 10/11, macOS, and Linux distributions. Includes driver installation, essential software setup, activation, and data migration from your previous system.</p>
+          </div>
+          <div class="neon-border card-shine rounded-2xl bg-darkcard/50 p-6 reveal" style="transition-delay:0.1s">
+            <h3 class="text-lg font-bold text-white mb-2">Screen & Flex Cable Repairs</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">Flickering displays, black screens, and intermittent display failures are often caused by worn LVDS/eDP flex cables. We diagnose, replace, and test under load — most repairs completed same-day.</p>
+          </div>
+          <div class="neon-border card-shine rounded-2xl bg-darkcard/50 p-6 reveal" style="transition-delay:0.2s">
+            <h3 class="text-lg font-bold text-white mb-2">Drive Partitioning & Dual-Boot</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">Full disk partitioning — separate OS from data, set up dual-boot with Windows and Linux, or resize existing volumes without data loss. We always create a backup image first.</p>
+          </div>
+          <div class="neon-border card-shine rounded-2xl bg-darkcard/50 p-6 reveal" style="transition-delay:0.1s">
+            <h3 class="text-lg font-bold text-white mb-2">Virus Removal & Security</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">Complete malware removal, ransomware recovery, browser hijack cleanup, and security hardening with antivirus setup, firewall configuration, and safe browsing practices.</p>
+          </div>
+          <div class="neon-border card-shine rounded-2xl bg-darkcard/50 p-6 reveal" style="transition-delay:0.2s">
+            <h3 class="text-lg font-bold text-white mb-2">Data Recovery</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">Recovering files from failing hard drives, corrupted file systems, accidentally formatted partitions, and damaged storage media. We work with HDDs, SSDs, USB drives, and memory cards.</p>
+          </div>
+          <div class="neon-border card-shine rounded-2xl bg-darkcard/50 p-6 reveal" style="transition-delay:0.3s">
+            <h3 class="text-lg font-bold text-white mb-2">Hardware Diagnostics</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">Comprehensive system diagnostics to identify failing RAM, overheating CPUs, dying batteries, faulty power supplies, and motherboard issues. Detailed reports with repair recommendations.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ═══ HOW IT WORKS ═══ -->
+      <div class="mb-20">
+        <div class="flex items-center gap-3 mb-10 reveal">
+          <div class="w-1.5 h-8 rounded-full bg-gradient-to-b from-cyber to-neon"></div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white">How It Works</h2>
+        </div>
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center reveal">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-neon/10 border border-neon/30 flex items-center justify-center text-neon font-black text-xl">1</div>
+            <h4 class="text-base font-bold text-white mb-2">Reach Out</h4>
+            <p class="text-sm text-gray-500">Contact us via WhatsApp, call, or our form with a description of your issue</p>
+          </div>
+          <div class="text-center reveal" style="transition-delay:0.1s">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-neon/10 border border-neon/30 flex items-center justify-center text-neon font-black text-xl">2</div>
+            <h4 class="text-base font-bold text-white mb-2">Diagnose</h4>
+            <p class="text-sm text-gray-500">We assess your device remotely or in-person and provide a detailed quote</p>
+          </div>
+          <div class="text-center reveal" style="transition-delay:0.2s">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-cyber/10 border border-cyber/30 flex items-center justify-center text-cyber font-black text-xl">3</div>
+            <h4 class="text-base font-bold text-white mb-2">Repair</h4>
+            <p class="text-sm text-gray-500">Upon approval, we execute the repair with quality parts and tested procedures</p>
+          </div>
+          <div class="text-center reveal" style="transition-delay:0.3s">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-cyber/10 border border-cyber/30 flex items-center justify-center text-cyber font-black text-xl">4</div>
+            <h4 class="text-base font-bold text-white mb-2">Deliver</h4>
+            <p class="text-sm text-gray-500">Your device is returned fully tested, with warranty coverage and support follow-up</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ═══ FAQ ═══ -->
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div class="reveal">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-1.5 h-8 rounded-full bg-gradient-to-b from-neon to-cyber"></div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">Common Questions</h2>
+          </div>
+          <div class="space-y-3" id="accordion">
+            <div class="accordion-item rounded-xl border border-white/5 bg-darkcard/40 overflow-hidden">
+              <button class="accordion-trigger w-full flex items-center justify-between px-6 py-4 text-left" onclick="toggleAccordion(this)">
+                <span class="text-sm font-medium text-white pr-4">My laptop screen flickers and goes black. Can you fix it?</span>
+                <svg class="w-5 h-5 text-neon flex-shrink-0 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+              </button>
+              <div class="accordion-content px-6 text-sm text-gray-400 leading-relaxed"><p class="pb-4">Yes. This is often caused by a worn or damaged screen flex cable (LVDS/eDP cable). We'll diagnose the exact cause, replace the cable if needed, and test the display under load. Most flex cable repairs are completed same-day.</p></div>
+            </div>
+            <div class="accordion-item rounded-xl border border-white/5 bg-darkcard/40 overflow-hidden">
+              <button class="accordion-trigger w-full flex items-center justify-between px-6 py-4 text-left" onclick="toggleAccordion(this)">
+                <span class="text-sm font-medium text-white pr-4">How do you handle drive partitioning and dual-boot setups?</span>
+                <svg class="w-5 h-5 text-neon flex-shrink-0 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+              </button>
+              <div class="accordion-content px-6 text-sm text-gray-400 leading-relaxed"><p class="pb-4">We handle full disk partitioning — whether you need to separate your OS from data, set up a dual-boot with Windows and Linux, or resize existing volumes without data loss. We always create a backup image before any partition operation.</p></div>
+            </div>
+            <div class="accordion-item rounded-xl border border-white/5 bg-darkcard/40 overflow-hidden">
+              <button class="accordion-trigger w-full flex items-center justify-between px-6 py-4 text-left" onclick="toggleAccordion(this)">
+                <span class="text-sm font-medium text-white pr-4">Can you install or reinstall my operating system?</span>
+                <svg class="w-5 h-5 text-neon flex-shrink-0 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+              </button>
+              <div class="accordion-content px-6 text-sm text-gray-400 leading-relaxed"><p class="pb-4">Absolutely. We perform clean installs of Windows 10/11, macOS, and major Linux distributions (Ubuntu, Fedora, etc.), including all driver installations, essential software setup, and activation. We'll also migrate your data from the old system if possible.</p></div>
+            </div>
+            <div class="accordion-item rounded-xl border border-white/5 bg-darkcard/40 overflow-hidden">
+              <button class="accordion-trigger w-full flex items-center justify-between px-6 py-4 text-left" onclick="toggleAccordion(this)">
+                <span class="text-sm font-medium text-white pr-4">Do you offer on-site tech support for businesses?</span>
+                <svg class="w-5 h-5 text-neon flex-shrink-0 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+              </button>
+              <div class="accordion-content px-6 text-sm text-gray-400 leading-relaxed"><p class="pb-4">Yes. We provide on-site support for offices and businesses across Abuja (FCT) and can arrange visits to other states. For enterprise clients, we also offer retainer-based IT management contracts with priority response times.</p></div>
+            </div>
+            <div class="accordion-item rounded-xl border border-white/5 bg-darkcard/40 overflow-hidden">
+              <button class="accordion-trigger w-full flex items-center justify-between px-6 py-4 text-left" onclick="toggleAccordion(this)">
+                <span class="text-sm font-medium text-white pr-4">What if my data is lost — can you recover it?</span>
+                <svg class="w-5 h-5 text-neon flex-shrink-0 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+              </button>
+              <div class="accordion-content px-6 text-sm text-gray-400 leading-relaxed"><p class="pb-4">In many cases, yes. We use professional data recovery tools to retrieve files from corrupted drives, formatted partitions, and failing storage media. Success rates depend on the extent of damage, but we always attempt recovery before recommending replacement.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Contact -->
+        <div class="reveal" style="transition-delay:0.2s">
+          <div class="sticky top-28 space-y-6">
+            <div class="p-8 rounded-2xl bg-darkcard/70 border border-white/10">
+              <h3 class="text-xl font-bold text-white mb-2">Need Immediate Help?</h3>
+              <p class="text-sm text-gray-400 mb-6">Reach out and we'll diagnose your issue within hours.</p>
+              <div class="space-y-3">
+                <a href="https://wa.me/2349138825300" target="_blank" rel="noopener" class="flex items-center gap-3 px-5 py-4 rounded-xl bg-green-500/10 border border-green-500/20 text-green-400 hover:bg-green-500/15 transition-colors">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <div><p class="font-semibold text-sm">Chat on WhatsApp</p><p class="text-xs text-green-500/70">+234 913 882 5300</p></div>
+                </a>
+                <a href="tel:+2349138825300" class="flex items-center gap-3 px-5 py-4 rounded-xl bg-neon/5 border border-neon/20 text-neon hover:bg-neon/10 transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+                  <div><p class="font-semibold text-sm">Call Us</p><p class="text-xs text-neon/60">+234 913 882 5300</p></div>
+                </a>
+                <a href="tel:+2349063446585" class="flex items-center gap-3 px-5 py-4 rounded-xl bg-neon/5 border border-neon/20 text-neon hover:bg-neon/10 transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+                  <div><p class="font-semibold text-sm">Alternate Line</p><p class="text-xs text-neon/60">+234 906 344 6585</p></div>
+                </a>
+                <a href="mailto:mastechinnovations@hotmail.com" class="flex items-center gap-3 px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:bg-white/8 transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                  <div><p class="font-semibold text-sm">Email Us</p><p class="text-xs text-gray-500">mastechinnovations@hotmail.com</p></div>
+                </a>
+              </div>
+            </div>
+            <div class="p-6 rounded-2xl bg-gradient-to-r from-neon/5 to-cyber/5 border border-neon/15">
+              <p class="text-sm text-gray-400"><span class="text-white font-semibold">Business Hours:</span> Mon – Sat, 9:00 AM – 7:00 PM WAT. Emergency support available outside hours via WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="relative border-t border-white/5 bg-darkbase">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <a href="index.html" class="flex items-center gap-2 mb-4"><div class="w-9 h-9 rounded-lg bg-gradient-to-br from-neon to-cyber flex items-center justify-center"><svg class="w-5 h-5 text-darkbase" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg></div><span class="text-lg font-bold"><span class="text-white">Mas</span><span class="text-neon">TECH</span></span></a>
+          <p class="text-sm text-gray-500 leading-relaxed mb-4">End-to-end technology solutions for businesses and professionals. Software, hardware, and IT support — all under one roof.</p>
+          <div class="text-xs text-gray-600 font-mono"><span class="text-neon/60">Reg. No:</span> BN9336585</div>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Pages</h4>
+          <ul class="space-y-2.5"><li><a href="index.html" class="text-sm text-gray-500 hover:text-neon transition-colors">Home</a></li><li><a href="services.html" class="text-sm text-gray-500 hover:text-neon transition-colors">Services</a></li><li><a href="tech-support.html" class="text-sm text-gray-500 hover:text-neon transition-colors">Tech Support</a></li><li><a href="ceo.html" class="text-sm text-gray-500 hover:text-neon transition-colors">CEO Portfolio</a></li><li><a href="contact.html" class="text-sm text-gray-500 hover:text-neon transition-colors">Contact</a></li></ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Services</h4>
+          <ul class="space-y-2.5"><li><a href="services.html" class="text-sm text-gray-500 hover:text-neon transition-colors">Web Development</a></li><li><a href="services.html" class="text-sm text-gray-500 hover:text-neon transition-colors">Custom Software</a></li><li><a href="services.html" class="text-sm text-gray-500 hover:text-neon transition-colors">Hardware Sales</a></li><li><a href="tech-support.html" class="text-sm text-gray-500 hover:text-neon transition-colors">Tech Support</a></li></ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Contact</h4>
+          <ul class="space-y-2.5 mb-6"><li class="text-sm text-gray-500">FCT, Abuja, Nigeria</li><li><a href="mailto:mastechinnovations@hotmail.com" class="text-sm text-gray-500 hover:text-neon transition-colors">mastechinnovations@hotmail.com</a></li><li><a href="tel:+2349138825300" class="text-sm text-gray-500 hover:text-neon transition-colors">+234 913 882 5300</a></li><li><a href="tel:+2349063446585" class="text-sm text-gray-500 hover:text-neon transition-colors">+234 906 344 6585</a></li></ul>
+          <div class="flex items-center gap-3">
+            <a href="https://x.com/mastechinnovation4u" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-neon/10 hover:border-neon/30 transition-all" aria-label="X"><svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://github.com/Mascottz" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-neon/10 hover:border-neon/30 transition-all" aria-label="GitHub"><svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a href="https://wa.me/2349138825300" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-neon/10 hover:border-neon/30 transition-all" aria-label="WhatsApp"><svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/5 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-gray-600">&copy; 2026 MasTECH Innovations. All rights reserved.</p>
+        <p class="text-xs text-gray-600 text-center sm:text-right">Registered Business Number: <span class="text-gray-400 font-mono">BN9336585</span> &nbsp;·&nbsp; FCT, Abuja, Nigeria</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
