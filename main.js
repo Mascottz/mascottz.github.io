@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileOverlay) mobileOverlay.classList.toggle('hidden', !menuOpen);
 
     if (menuOpen) {
-      if (bar1) bar1.style.transform = 'rotate(45deg) translate(4px, 4px)';
+      if (bar1) { bar1.style.transform = 'rotate(45deg) translate(5px, 5px)'; bar1.style.background = '#00f0ff'; }
       if (bar2) bar2.style.opacity = '0';
-      if (bar3) { bar3.style.transform = 'rotate(-45deg) translate(4px, -4px)'; bar3.style.width = '1.5rem'; }
+      if (bar3) { bar3.style.transform = 'rotate(-45deg) translate(5px, -5px)'; bar3.style.width = '1.5rem'; bar3.style.background = '#00f0ff'; }
       document.body.style.overflow = 'hidden';
     } else {
-      if (bar1) bar1.style.transform = '';
+      if (bar1) { bar1.style.transform = ''; bar1.style.background = ''; }
       if (bar2) bar2.style.opacity = '1';
-      if (bar3) { bar3.style.transform = ''; bar3.style.width = '1rem'; }
+      if (bar3) { bar3.style.transform = ''; bar3.style.width = '1rem'; bar3.style.background = ''; }
       document.body.style.overflow = '';
     }
   }

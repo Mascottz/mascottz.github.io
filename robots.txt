@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mastechinnovations.xyz/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block non-public files
+Disallow: /main.js
+Disallow: /styles.css
